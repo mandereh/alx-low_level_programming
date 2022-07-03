@@ -5,7 +5,11 @@
  */
 int main(void)
 {
-char alphabets[26] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-putchar("%s", tolower(alphabets));
+int ch;
+for (ch = 97;ch <= 122;ch++)
+{
+putchar(ch)
+}
+putchar("\n);
 return (0);
 }
