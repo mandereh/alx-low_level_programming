@@ -4,8 +4,8 @@
 */
 void print_numbers(void)
 {
-int i;
-for (i = 0; i < 10; i++)
-_putchar(i + '0');
+int x;
+for (x = 0; x < 10; x++)
+_putchar(x + '0');
 _putchar('\n');
 }
