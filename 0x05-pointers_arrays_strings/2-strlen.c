@@ -11,6 +11,6 @@ int len;
 for (; *s != '\0'; s++)
 {
 len = len + 1;
-return (len);
 }
+return (len);
 }
