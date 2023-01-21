@@ -1,24 +1,29 @@
-#include "main.h"
+#include "holberton.h"
+
 /**
- * * cap_string -> capitalization function
- * * @x: string param
- * * Return: capitalized version of the string
-*/
-char *cap_string(char *x)
+ * cap_string - capitalizes all words of a string
+ * @s: string to capitalize
+ * Return: string;
+ */
+
+char *cap_string(char *s)
 {
-char spc[] = {32, 9, '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
-int len = 13;
-int a = 0, i;
-while (x[a])
-{
-i = 0;
-while (i < len)
-{
-if ((a == 0 || x[a - 1] == spc[i]) && (x[a] >= 97 && x[a] <= 122))
-x[a] = x[a] - 32;
-i++;
-}
-a++;
-}
-return (x);
+	int i = 1;
+
+	if (s[0] >= 'a' && s[0] <= 'z')
+	{
+		s[0] = s[0] - 32;
+	}
+	for (; s[i]; i++)
+	{
+		if ((s[i - 1] == ' ' || s[i - 1] == '\n' || s[i - 1] == '\t'
+		    || s[i - 1] == ',' || s[i - 1] == ';' || s[i - 1] == '!'
+		    || s[i - 1] == '?' || s[i - 1] == '"' || s[i - 1] == '('
+		     || s[i - 1] == ')' || s[i - 1] == '{' || s[i - 1] == '}'
+		     || s[i - 1] == '.') && (s[i] > 'a' && s[i] < 'z'))
+		{
+			s[i] = s[i] - 32;
+		}
+	}
+	return (s);
 }

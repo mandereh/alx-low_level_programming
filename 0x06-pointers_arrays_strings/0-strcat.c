@@ -1,20 +1,28 @@
-#include "main.h"
+#include "holberton.h"
 /**
- * * _strcat -> this is a funcion strcat
- * * @dest: first param
- * * @src: second param
- * * Return: a string
-*/
+ * _strcat - concatenates two strings
+ * @dest: input value
+ * @src: input value
+ *
+ * Return: void
+ */
 char *_strcat(char *dest, char *src)
 {
-int len = 0, i;
-while (dest[len])
-len++;
-for (i = 0; src[i] != 0; i++)
-{
-dest[len] = src[i];
-len += 1;
-}
-dest[len] = '\0';
-return (dest);
+	int i;
+	int j;
+
+	i = 0;
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	j = 0;
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }

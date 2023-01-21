@@ -1,24 +1,24 @@
-#include "main.h"
+#include "holberton.h"
 /**
- * * leet -> a leet function
- * * @x: param x
- * * Return: a string
+ * leet - encodes a string into 1337
+ * @c: char to encode
+ * Return: @c char
 */
-char *leet(char *x)
+char *leet(char *c)
 {
-int a = 0, b, l = 5;
-char tr[5] = {'A', 'E', 'O', 'T', 'L'};
-char trw[5] = {'4', '3', '0', '7', '1'};
-while (x[a])
-{
-b = 0;
-while (b < l)
-{
-if (x[a] == tr[b] || x[a] - 32 == tr[b])
-x[a] = trw[b];
-b++;
-}
-a++;
-}
-return (x);
+	int i;
+	int j;
+	char letters[] = "aeotl";
+	char up_letters[] = "AEOTL";
+	char numbers[] = "43071";
+
+	for (i = 0; c[i] != '\0'; i++)
+	{
+		for (j = 0; letters[j] != '\0'; j++)
+		{
+			if (c[i] == letters[j] || c[i] == up_letters[j])
+				c[i] = numbers[j];
+		}
+	}
+	return (c);
 }
