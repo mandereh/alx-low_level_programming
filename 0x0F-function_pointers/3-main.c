@@ -1,20 +1,44 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "3-calc.h"
+
 /**
- *  * main - main file
- *   * @argc: number of lines arguments
- *    * @argv: array of elements
- *     * Return: 0
-*/
-int main(int argc, char *argv[])
+ * main - Principal
+ *
+ * @ac: count arguments
+ * @ag: array
+ *
+ * Return: Always 0
+ */
+int main(int arc, char *arg[])
 {
-int R;
-if (argc != 4)
-{
-printf("Error\n");
-exit(98);
-}
-R = (*get_op_func(argv[2]))(atoi(argv[1]), atoi(argv[3]));
-printf("%d\n", R);
-return (0);
+	int num1, num2, (*operate)(int, int);
+
+	if (arc != 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+	if ((*arg[2] != '+' &&
+		*arg[2] != '-' &&
+		*arg[2] != '/' &&
+		*arg[2] != '*' &&
+		*arg[2] != '%')
+		|| arg[2][1] != '\0')
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
+	num1 = atoi(arg[1]);
+	num2 = atoi(arg[3]);
+	if ((*arg[2] == '/' || *arg[2] == '%') && (num2 == 0))
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	operate = get_op_func(arg[2]);
+	printf("%d\n", operate(num1, num2));
+	return (0);
+
 }

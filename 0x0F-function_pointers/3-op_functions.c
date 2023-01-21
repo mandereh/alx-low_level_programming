@@ -1,61 +1,61 @@
-#include <stdio.h>
 /**
- *  * op_add - addition
- *   * @a: sumnd 1
- *    * @b: sumnd 2
- *     * Return: rsult
-*/
+ * op_add - Add two integers
+ *
+ * @a: Integer 1
+ * @b: Integer 2
+ *
+ * Return: Integer
+ */
 int op_add(int a, int b)
 {
-return (a + b);
+	return (a + b);
 }
+
 /**
- *  * op_sub - subtraction
- *   * @a: minuend
- *    * @b: sustrnd
- *     * Return: result
-*/
+ * op_sub - Sub two integers
+ *
+ * @a: Integer 1
+ * @b: Integer 2
+ *
+ * Return: Integer
+ */
 int op_sub(int a, int b)
 {
-return (a - b);
+	return (a - b);
 }
 /**
- *  * op_mul - multiplication
- *   * @a: multp 1
- *    * @b: multp 2
- *     * Return: result
+ * op_mul - Product of two integers
+ *
+ * @a: Integer 1
+ * @b: Integer 2
+ *
+ * Return: Integer
  */
 int op_mul(int a, int b)
 {
-return (a * b);
+	return (a * b);
 }
 /**
- *  * op_div - division
- *   * @a: divisr
- *    * @b: dividndo
- *     * Return: reult
-*/
+ * op_div - Result of the dividion os two integers
+ *
+ * @a: Integer 1
+ * @b: Integer 2
+ *
+ * Return: Integer
+ */
 int op_div(int a, int b)
 {
-if (b)
-{
-return (a / b);
-}
-printf("Error\n");
-exit(100);
+	return (a / b);
 }
 /**
- *  * op_mod - modulo
- *   * @a: vaper 1
- *    * @b: vaper 2
- *     * Return: result
-*/
+ * op_mod - Remainder of the division
+ *
+ * @a: Integer 1
+ * @b: Integer 2
+ *
+ * Return: Integer
+ */
 int op_mod(int a, int b)
 {
-if (b)
-{
-return (a % b);
-}
-printf("Error\n");
-exit(100);
+	return (a % b);
 }
