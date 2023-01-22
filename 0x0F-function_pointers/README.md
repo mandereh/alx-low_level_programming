@@ -1,1 +1,1 @@
-Project Function_Pointers
+Solutions to tasks on Function pointers
